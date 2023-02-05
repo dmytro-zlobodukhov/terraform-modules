@@ -6,6 +6,13 @@ variable "name" {
 variable "schedule_expression" {
   type        = string
   description = "The scheduling expression.For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`."
+  default = ""
+}
+
+variable "event_pattern" {
+  type        = string
+  description = "The event pattern described a JSON object. At least one of `schedule_expression` or `event_pattern` is required."
+  default = ""
 }
 
 variable "cluster_arn" {

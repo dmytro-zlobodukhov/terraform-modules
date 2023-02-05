@@ -15,6 +15,11 @@ resource "aws_cloudwatch_event_rule" "default" {
   # For example, "cron(0 20 * * ? *)" or "rate(5 minutes)".
   # https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html
   schedule_expression = var.schedule_expression
+
+  # The event pattern for EventBridge described a JSON object.
+  # See full documentation of Events and Event Patterns in EventBridge for details.
+  # https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html
+  event_pattern       = var.event_pattern
 }
 
 # https://www.terraform.io/docs/providers/aws/r/cloudwatch_event_target.html
