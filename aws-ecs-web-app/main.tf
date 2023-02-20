@@ -136,7 +136,8 @@ locals {
 
 module "ecs_alb_service_task" {
   source  = "cloudposse/ecs-alb-service-task/aws"
-  version = "0.64.1"
+  # version = "0.64.1"
+  version = "0.66.4"
 
   alb_security_group                 = var.alb_security_group
   use_alb_security_group             = var.use_alb_security_group
@@ -169,6 +170,8 @@ module "ecs_alb_service_task" {
   exec_enabled                       = var.exec_enabled
   task_policy_arns                   = var.task_policy_arns
   task_role_arn                      = var.task_role_arn
+  task_exec_policy_arns              = var.task_exec_policy_arns
+  task_exec_role_arn                 = var.task_exec_role_arn
   propagate_tags                     = var.propagate_tags
   enable_ecs_managed_tags            = var.enable_ecs_managed_tags
   circuit_breaker_deployment_enabled = var.circuit_breaker_deployment_enabled

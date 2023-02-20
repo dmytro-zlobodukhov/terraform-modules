@@ -31,6 +31,10 @@ override.tf.json
 # LOCK FILES
 .terraform.lock.hcl
 
+# PROVIDER
+provider.tf
+*/provider.tf
+
 # ENV
 .env
 .env/**
