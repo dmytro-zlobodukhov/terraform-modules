@@ -28,4 +28,18 @@ override.tf.json
 # Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
 # example: *tfplan*
 
+# LOCK FILES
 .terraform.lock.hcl
+
+# ENV
+.env
+.env/**
+.env-gh
+.env-gh/**
+.env.*
+.env.*/**
+
+# OTHER FILES AND FOLDERS
+.DS_Store
+.DS_Store/**
+*/.DS_Store/**
